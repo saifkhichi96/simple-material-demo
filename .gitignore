@@ -1,0 +1,12 @@
+_site
+Gemfile
+Gemfile.lock
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+
+# Local files
+.DS_STORE
+Desktop.ini
+._*

@@ -1,0 +1,126 @@
+# use the `simple-material` theme by saifkhichi96
+remote_theme: saifkhichi96/simple-material
+
+# set 'https://yourgithubuser.github.io'
+url: 'https://saifkhichi96.github.io'
+
+# set '' if using in your user repo, or '/repository-name' if using in a project repo
+baseurl: '/simple-material-demo'
+
+# Main menu
+menu_main:
+- title:                   Home
+  icon:                    home
+  url:                     /
+- title:                   Profile
+  icon:                    face
+  url:                     /about/
+- title:                   Services
+  icon:                    design_services
+  url:                     /services/
+- title:                   # empty item adds a small divider in list
+- title:                   Contact
+  icon:                    # this item does not have an icon
+  url:                     /contact/
+
+# Social menu
+menu_social:
+  # Provide your usernames for social icons you want to show in the footer
+  dribbble:
+  email:
+  facebook:
+  flickr:
+  instagram:
+  linkedin:
+  pinterest:
+  twitter:
+  stackoverflow:
+  youtube:
+  playconsole:
+
+  # For using the GitHub contributions chart and Goodreads books widgets
+  github:                  saifkhichi96  # your GitHub username
+  goodreads:               26736309  # your Goodreads user id
+
+# Show main menu as a `sitemap` in footer
+navigation_footer:         true
+
+# To enable breadcrumbs, set to true
+breadcrubms:               false
+
+# Enable comments on posts (provide your Disqus user id)
+disqus:
+
+# Enable ads and analytics
+# google_adsense:            ca-pub-6293532XXXXXXXXX
+# google_analytics:          UA-43339XXX-XX
+# google_analytics_ga4:      G-GABC1DEFG
+
+# Default license of website content
+defaults:
+  - scope:
+      path:                ''  # show on all pages
+    values:
+      license:
+        content:
+          name:            Creative Commons 4.0 Attribution International
+          url:             https://creativecommons.org/licenses/by/4.0/
+        code:
+          name:            MIT License
+          url:             https://opensource.org/licenses/MIT
+
+
+#
+# !! You don't need to change any of the configuration flags below !!
+#
+
+collections:
+  projects:
+    output:                true
+    permalink:             /portfolio/:path/
+  services:
+    output:                true
+    permalink:             /services/:path/
+
+pagination:
+  enabled:                 true
+  per_page:                10
+  permalink:               /:num/
+  sort_reverse:            true
+  sort_field:              'date'
+  title:                   ':title'
+  trail:
+    before:                2
+    after:                 2
+
+permalink:                 /:title/
+
+# The release of Jekyll Now that you're using
+version:                   v1.0.0
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input:                   GFM
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style:                   :compressed # You might prefer not to minify using :expanded
+
+include:                   ['_pages']
+
+# Enable projects (required if you want to showcase your work portfolio)
+collections:
+  projects:
+    output:                true
+    permalink:             /portfolio/:path/  # set this to whatever you want
+  services:
+    output:                true
+    permalink:             /services/:path/
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README
+  - LICENSE
